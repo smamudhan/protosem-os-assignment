@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <title>Docs</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+
+<body style="padding: 4%;">
+  <header style="padding-top: 1%;">
+    <div align="center">
+      <h1>{{name.capitalize()}}</h1>
+      <p>
+        <a href="/">Homepage</a>
+        <br />
+        <a href="#code">Code</a>
+        ·
+        <a href="#endpoint">Endpoint Information</a>
+        ·
+        <a href="#response">Response</a>
+      </p>
+      <hr />
+    </div>
+  </header>
+  <div>
+    <a name="endpoint" />
+    <h3>REST Endpoint information</h3>
+    <table style="width: 100%" class="table table-bordered">
+      <!-- Header row -->
+      <tr class="thead-light">
+        <th>Name</th>
+        <th>Endpoint</th>
+        <th>Request Type</th>
+        <th>Description</th>
+        <th>Parameters</th>
+        <th>Sample Request</th>
+      </tr>
+      <!-- Data rows start here -->
+      <tr>
+        <td>Execute {{name.capitalize()}}</td>
+        <td><code>/{{name}}</code></td>
+        <td>GET</td>
+        <td>Execute {{name.capitalize()}} algorithm and return response</td>
+        <td><i>None</i></td>
+        <td><code>curl --location --request GET '{baseURI}/{{name}}'</code></td>
+      </tr>
+      <!-- End rows -->
+    </table>
+    <a name="response" />
+    <h4>Response</h4>
+    <pre>{{response}}</pre>
+  </div>
+  <hr />
+  <div>
+    <a name="code" />
+    <h3><u>Code</u></h3>
+    <code><pre>{{content}}</pre></code>
+    </p>
+  </div>
+  <hr />
+</body>
+</html>
